@@ -198,7 +198,13 @@
 (() => {
   const C = { petrol: 0x1a2e3a, amber: 0xFF6B35, green: 0x0099CC, teal: 0x66c3e2, white: 0xffffff, bg: 0x0d1b2a };
   const canvas = document.getElementById('gl');
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false, powerPreference: 'high-performance' });
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false, powerPreference: 'high-performance' }); }
+  catch (err) {
+    // No WebGL: keep text, navigation and QR codes working without the 3D scenes.
+    canvas.style.display = 'none';
+    renderer = { setPixelRatio() {}, setSize() {}, setClearColor() {}, render() {}, shadowMap: {} };
+  }
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
