@@ -1,0 +1,454 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Cold Call Leitfaden – Top 0,1 %</title><style>@page { size: A4; margin: 0; }
+:root {
+  --ink: #1d2230;
+  --text: #2c3140;
+  --soft: #6b7180;
+  --line: #e3e1e4;
+  --panel: #f6f3f2;
+  --rose: #a3445a;
+  --rose-soft: #f7ecee;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { font-family: 'Inter', sans-serif; font-size: 9.6pt; line-height: 1.5; color: var(--text); background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+b { font-weight: 600; color: var(--ink); }
+i, em { font-style: italic; }
+
+.page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; padding: 0 18mm; }
+.run { position: absolute; left: 18mm; right: 18mm; display: flex; justify-content: space-between; font-size: 7pt; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
+header.run { top: 10mm; padding-bottom: 2.5mm; border-bottom: 1px solid var(--line); }
+header.run b { color: var(--rose); font-weight: 600; }
+footer.run { bottom: 10mm; padding-top: 2.5mm; border-top: 1px solid var(--line); }
+footer.run.light { color: rgba(255,255,255,.5); border-color: rgba(255,255,255,.15); }
+.content { position: absolute; top: 22mm; bottom: 20mm; left: 18mm; right: 18mm; overflow: hidden; }
+.content > * + * { margin-top: 5mm; }
+
+/* section head */
+.sechead { display: flex; gap: 6mm; align-items: flex-end; padding-bottom: 5mm; border-bottom: 2px solid var(--ink); margin-bottom: 7mm; }
+.secnum { font-family: 'Inter Display'; font-weight: 700; font-size: 40pt; line-height: .82; color: var(--rose); }
+h1 { font-family: 'Inter Display'; font-weight: 700; font-size: 24pt; line-height: 1.05; color: var(--ink); letter-spacing: -.01em; }
+.lead { font-size: 10pt; color: var(--soft); margin-top: 1.5mm; }
+h2 { font-family: 'Inter Display'; font-weight: 600; font-size: 12.5pt; color: var(--ink); margin-bottom: 2.5mm; }
+.h2sub { color: var(--soft); margin: -1.5mm 0 4mm; }
+.content > h2 { margin-top: 7mm; }
+.content > h2:first-child { margin-top: 0; }
+
+p + p, p + *, * + p { margin-top: 2.5mm; }
+.label { font-size: 6.8pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--rose); margin-top: 3.5mm; margin-bottom: 1mm; }
+blockquote { font-family: 'Caladea', serif; font-style: italic; font-size: 11.5pt; line-height: 1.4; color: var(--ink); border-left: 3px solid var(--rose); padding: 1mm 0 1mm 4mm; margin-top: 3.5mm; }
+blockquote.small { font-size: 9.5pt; margin: 0; }
+.note { font-size: 8.8pt; color: var(--soft); margin-top: 3mm; }
+.say { background: var(--rose-soft); border-left: 3px solid var(--rose); padding: 2.6mm 3.5mm; margin-top: 2.5mm; font-size: 9.3pt; color: var(--ink); }
+.say::before { content: '»'; color: var(--rose); font-weight: 700; margin-right: 1.5mm; }
+.say.small { margin: 0; font-size: 8.6pt; }
+.hint { color: var(--soft); font-size: 8.3pt; }
+
+ul.bul { list-style: none; margin-top: 2mm; }
+ul.bul li { position: relative; padding-left: 4.5mm; margin-bottom: 1.8mm; }
+ul.bul li::before { content: ''; position: absolute; left: 0; top: 1.9mm; width: 1.5mm; height: 1.5mm; background: var(--rose); }
+ol.num { list-style: none; }
+ol.num li { display: flex; gap: 3.5mm; padding: 2.3mm 0; border-bottom: 1px solid var(--line); }
+ol.num li:last-child { border-bottom: 0; }
+ol.num .n { flex: 0 0 5.5mm; height: 5.5mm; border-radius: 50%; background: var(--ink); color: #fff; font-size: 7.5pt; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: .2mm; }
+ol.qs li { padding: 1.6mm 0; }
+ol.qs .n { background: var(--rose-soft); color: var(--rose); }
+ul.check { list-style: none; }
+ul.check li { position: relative; padding: 2.4mm 0 2.4mm 7mm; border-bottom: 1px solid var(--line); }
+ul.check li i { position: absolute; left: 0; top: 3mm; width: 3.4mm; height: 3.4mm; border: 1.3px solid var(--rose); border-radius: .8mm; }
+
+table { width: 100%; border-collapse: collapse; }
+thead th { background: var(--ink); color: #fff; font-size: 7pt; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; text-align: left; padding: 2.2mm 3mm; }
+td { padding: 2.4mm 3mm; border-bottom: 1px solid var(--line); vertical-align: top; }
+tbody tr:nth-child(even) td { background: #fbfafa; }
+table.kv th, table.sig th { text-align: left; vertical-align: top; font-weight: 600; padding: 1.6mm 3mm 1.6mm 0; border-bottom: 1px solid var(--line); color: var(--ink); background: none; }
+table.kv th { width: 20mm; font-size: 6.8pt; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); padding-top: 2.1mm; }
+table.kv td, table.sig td { padding: 1.6mm 0; background: none !important; }
+table.sig th { width: 52%; }
+
+.dot { display: inline-block; width: 2.6mm; height: 2.6mm; border-radius: 50%; margin-right: 2mm; vertical-align: 0; }
+.dot.red { background: #D9534F; } .dot.yellow { background: #E8B13A; } .dot.purple { background: #7B5EA7; } .dot.blue { background: #3B7DD8; }
+
+.cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+.cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+.cols3.tight { margin-top: 3mm; }
+.mini { background: #fff; border-top: 2px solid var(--rose); padding: 2.5mm 3mm; font-size: 8.8pt; }
+
+.panel { background: var(--panel); padding: 5mm 6mm; margin-top: 7mm !important; }
+.panel.dark { background: var(--ink); color: #d9dbe2; }
+.panel.dark h2, .panel.dark b { color: #fff; }
+.panel.dark blockquote { color: #fff; border-color: var(--rose); }
+.panel.warn { border-left: 4px solid var(--rose); }
+.formula { font-family: 'Inter Display'; font-weight: 600; font-size: 17pt; line-height: 1.25; text-align: center; padding: 3mm 0 1mm; color: inherit; }
+.panel.dark .formula { color: #fff; }
+.formula span { color: #e58fa2; }
+.panel:not(.dark) .formula span { color: var(--rose); }
+
+.levgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8mm; }
+.lev { display: flex; gap: 4mm; padding: 4.2mm 0; border-bottom: 1px solid var(--line); }
+.ln { font-family: 'Inter Display'; font-weight: 700; font-size: 16pt; line-height: 1; color: var(--rose); flex: 0 0 9mm; }
+.lt { font-weight: 600; color: var(--ink); font-size: 10.2pt; }
+.ld { color: var(--soft); font-size: 8.8pt; }
+.lx { font-family: 'Caladea', serif; font-style: italic; font-size: 9.5pt; color: var(--ink); margin-top: 1mm; }
+
+/* colour map */
+.tmap { display: grid; grid-template-columns: 8mm 1fr 1fr; gap: 3mm; margin-top: 4mm !important; }
+.ay { writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; font-size: 7pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--soft); background: var(--panel); }
+.ax { text-align: center; font-size: 7pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--soft); background: var(--panel); padding: 1.2mm; }
+.tc { border-top: 4px solid var(--c); background: color-mix(in srgb, var(--c) 7%, white); padding: 3.5mm 4mm; }
+.tch { font-family: 'Inter Display'; font-weight: 700; font-size: 13pt; color: var(--ink); display: flex; align-items: center; gap: 2mm; }
+.tcs { color: var(--soft); font-size: 8.8pt; }
+.tcw { font-size: 8.8pt; margin-top: 1.5mm; }
+.pdot { display: inline-block; width: 3mm; height: 3mm; border-radius: 50%; background: var(--c); }
+
+/* profiles */
+.prof { border: 1px solid var(--line); border-top: 5px solid var(--c); margin-top: 5mm; }
+.profhead { display: flex; align-items: baseline; gap: 3mm; padding: 3.5mm 5mm 2.5mm; background: color-mix(in srgb, var(--c) 8%, white); }
+.profhead .pdot { width: 3.4mm; height: 3.4mm; align-self: center; }
+.pname { font-family: 'Inter Display'; font-weight: 700; font-size: 15pt; color: var(--ink); }
+.psub { color: var(--soft); font-family: 'Caladea', serif; font-style: italic; font-size: 11pt; }
+.profkv { padding: 1mm 5mm 0; }
+.profcols { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; padding: 2mm 5mm 4.5mm; }
+.colh { font-size: 7pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); border-bottom: 2px solid var(--c); padding-bottom: 1mm; margin-bottom: 2mm; }
+.profcols .label { color: var(--soft); }
+.profcols table.kv { margin-top: 2.5mm; }
+.profcols .say { border-left-color: var(--c); background: color-mix(in srgb, var(--c) 9%, white); }
+.profcols .say::before { color: var(--c); }
+
+/* steps */
+.steps { position: relative; }
+.step { display: flex; gap: 5mm; padding-bottom: 5mm; position: relative; }
+.step::before { content: ''; position: absolute; left: 5mm; top: 11mm; bottom: 0; width: 1px; background: var(--line); }
+.step:last-child::before { display: none; }
+.stepn { flex: 0 0 10mm; height: 10mm; border-radius: 50%; background: var(--rose); color: #fff; font-family: 'Inter Display'; font-weight: 700; font-size: 13pt; display: flex; align-items: center; justify-content: center; }
+.stepb { flex: 1; }
+.stept { font-family: 'Inter Display'; font-weight: 700; font-size: 13pt; color: var(--ink); padding-top: 1.5mm; }
+.stept span { font-family: 'Inter'; font-weight: 400; font-size: 8pt; color: var(--soft); letter-spacing: .04em; margin-left: 3mm; text-transform: uppercase; }
+.stepb .note { margin-top: 2mm; }
+
+/* objections */
+.aff { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 3mm; }
+.aff > div { background: var(--panel); padding: 3.5mm 4mm; border-top: 3px solid var(--rose); }
+.an { font-family: 'Inter Display'; font-weight: 700; font-size: 14pt; color: var(--rose); }
+.at { font-weight: 700; color: var(--ink); }
+.ad { font-size: 8.6pt; color: var(--soft); }
+table.obj th { width: 33%; }
+table.obj tbody th { text-align: left; vertical-align: top; padding: 2.5mm 3mm; font-family: 'Inter Display'; font-weight: 600; font-size: 10.2pt; color: var(--ink); border-bottom: 1px solid var(--line); background: var(--panel); }
+table.obj td { padding: 2.5mm 3mm; }
+.on { display: block; font-family: 'Inter'; font-size: 7pt; letter-spacing: .14em; color: var(--rose); margin-bottom: .5mm; }
+.oa { position: relative; padding-left: 4.5mm; }
+.oa + .oa { margin-top: 1.8mm; }
+.oa::before { content: '→'; position: absolute; left: 0; color: var(--rose); font-weight: 600; }
+
+/* charm */
+table.dd thead th.do { background: var(--rose); }
+table.dd td.dont { color: var(--soft); }
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; text-align: center; }
+.tw { font-family: 'Inter Display'; font-weight: 700; font-size: 17pt; color: #fff; }
+.td { font-family: 'Caladea', serif; font-style: italic; font-size: 11pt; color: #e58fa2; }
+.cheat { border: 2px solid var(--ink); padding: 5mm 6mm; margin-top: 8mm !important; }
+.cheat table.kv th { width: 24mm; }
+
+/* cover */
+.cover { background: var(--ink); color: #fff; padding: 0; }
+.cbar { display: flex; height: 6mm; }
+.cbar i { flex: 1; }
+.cinner { position: absolute; left: 22mm; right: 22mm; top: 92mm; }
+.ck { font-size: 8.5pt; letter-spacing: .26em; text-transform: uppercase; color: #e58fa2; font-weight: 600; }
+.ctitle { font-family: 'Inter Display'; font-weight: 800; font-size: 76pt; line-height: 1; letter-spacing: -.02em; margin-top: 5mm; }
+.crule { width: 30mm; height: 3px; background: var(--rose); margin: 10mm 0 8mm; }
+.csub { font-size: 13pt; line-height: 1.45; color: #e7e8ee; max-width: 130mm; }
+.csub.en { font-size: 10.5pt; color: #9aa0ae; margin-top: 3mm; }
+.cfoot { position: absolute; left: 22mm; right: 22mm; bottom: 16mm; display: flex; justify-content: space-between; font-size: 7.5pt; letter-spacing: .2em; text-transform: uppercase; color: #9aa0ae; border-top: 1px solid rgba(255,255,255,.15); padding-top: 3mm; }
+
+/* contents */
+.toch { font-size: 28pt; padding-bottom: 5mm; border-bottom: 2px solid var(--ink); margin-bottom: 8mm; }
+.toch span { color: var(--soft); font-weight: 400; }
+.tock { font-size: 7pt; letter-spacing: .16em; text-transform: uppercase; color: var(--rose); font-weight: 600; }
+.tocl { font-family: 'Inter Display'; font-weight: 700; font-size: 15pt; color: var(--ink); margin-bottom: 3mm; }
+.tocrow { display: flex; gap: 4mm; padding: 2.8mm 0; border-bottom: 1px solid var(--line); font-size: 10.5pt; }
+.tocrow .tn { color: var(--rose); font-weight: 700; width: 7mm; }
+.tocrow .tt { flex: 1; color: var(--ink); }
+.tocrow .tp { color: var(--soft); }
+.legend { margin-top: 14mm !important; }
+.legh { font-size: 7pt; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: var(--soft); }
+.legd { font-size: 8pt; color: var(--soft); margin-top: 2mm; }
+.legdots { display: flex; gap: 2mm; padding: 2.5mm 0; }
+.legdots i { width: 4mm; height: 4mm; border-radius: 50%; }
+
+/* part opener */
+.part { background: var(--ink); color: #fff; }
+.partinner { position: absolute; left: 22mm; right: 22mm; top: 60mm; }
+.partk { font-size: 8.5pt; letter-spacing: .26em; text-transform: uppercase; color: #e58fa2; font-weight: 600; }
+.partt { font-family: 'Inter Display'; font-weight: 800; font-size: 54pt; line-height: 1; margin: 3mm 0 18mm; }
+.partov { font-size: 7pt; letter-spacing: .16em; text-transform: uppercase; color: #9aa0ae; padding-bottom: 2.5mm; border-bottom: 1px solid rgba(255,255,255,.2); }
+.partrow { display: flex; gap: 5mm; padding: 4mm 0; border-bottom: 1px solid rgba(255,255,255,.12); align-items: baseline; }
+.prn { color: #e58fa2; font-weight: 700; width: 8mm; }
+.prt { flex: 1; font-family: 'Inter Display'; font-weight: 600; font-size: 13pt; }
+.prt em { display: block; font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 9pt; color: #9aa0ae; margin-top: .5mm; }
+.prp { color: #9aa0ae; font-size: 9pt; }
+</style></head><body><section class="page cover">
+  <div class="cbar"><i style="background:#D9534F"></i><i style="background:#E8B13A"></i><i style="background:#7B5EA7"></i><i style="background:#3B7DD8"></i></div>
+  <div class="cinner">
+    <div class="ck">Cold Call Leitfaden · Playbook</div>
+    <div class="ctitle">Top 0,1 %</div>
+    <div class="crule"></div>
+    <div class="csub">Verkaufspsychologie, Farbtypen und Einwandbehandlung für die Kaltakquise</div>
+    <div class="csub en">Sales psychology, colour types and objection handling for cold calling</div>
+  </div>
+  <div class="cfoot"><span>Deutsch · English</span><span>Ausgabe 2026</span></div>
+</section><section class="page">
+  <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Inhalt · Contents</span></header>
+  <div class="content">
+    <h1 class="toch">Inhalt <span>· Contents</span></h1>
+    <div class="cols2 toc"><div class="tocc"><div class="tock">Teil 1</div><div class="tocl">Deutsch</div>
+  <div class="tocrow"><span class="tn">01</span><span class="tt">Mindset</span><span class="tp">4</span></div><div class="tocrow"><span class="tn">02</span><span class="tt">Kaufpsychologie</span><span class="tp">5</span></div><div class="tocrow"><span class="tn">03</span><span class="tt">Die 4 Farbtypen</span><span class="tp">7</span></div><div class="tocrow"><span class="tn">04</span><span class="tt">Der Call</span><span class="tp">10</span></div><div class="tocrow"><span class="tn">05</span><span class="tt">Einwände</span><span class="tp">12</span></div><div class="tocrow"><span class="tn">06</span><span class="tt">Charme & Stimme</span><span class="tp">14</span></div></div><div class="tocc"><div class="tock">Part 2</div><div class="tocl">English</div>
+  <div class="tocrow"><span class="tn">01</span><span class="tt">Mindset</span><span class="tp">17</span></div><div class="tocrow"><span class="tn">02</span><span class="tt">Buying Psychology</span><span class="tp">18</span></div><div class="tocrow"><span class="tn">03</span><span class="tt">The 4 Colour Types</span><span class="tp">20</span></div><div class="tocrow"><span class="tn">04</span><span class="tt">The Call</span><span class="tp">23</span></div><div class="tocrow"><span class="tn">05</span><span class="tt">Objections</span><span class="tp">25</span></div><div class="tocrow"><span class="tn">06</span><span class="tt">Charm & Voice</span><span class="tp">27</span></div></div></div>
+    <div class="panel legend">
+      <div class="legh">So liest du diesen Leitfaden · How to read this playbook</div>
+      <div class="cols3 tight">
+        <div><div class="say small">Wörtliche Formulierungen für den Call</div><div class="legd">Script lines to say on the call</div></div>
+        <div><blockquote class="small">Haltung und Leitsätze</blockquote><div class="legd">Mindset and principles</div></div>
+        <div><div class="legdots"><i style="background:#D9534F"></i><i style="background:#E8B13A"></i><i style="background:#7B5EA7"></i><i style="background:#3B7DD8"></i></div><div class="legd">Rot · Gelb · Lila · Blau<br>Red · Yellow · Purple · Blue</div></div>
+      </div>
+    </div>
+  </div>
+  <footer class="run"><span>Deutsch · English</span><span>2</span></footer>
+</section><section class="page part">
+    <div class="partinner">
+      <div class="partk">Teil 1</div>
+      <div class="partt">Deutsch</div>
+      <div class="partov">Inhalt dieses Teils</div>
+      <div class="partrow"><span class="prn">01</span><span class="prt">Mindset<em>Du rufst nicht an. Du lädst ein.</em></span><span class="prp">4</span></div><div class="partrow"><span class="prn">02</span><span class="prt">Kaufpsychologie<em>Menschen kaufen keine Produkte. Sie kaufen einen besseren Zustand von sich selbst.</em></span><span class="prp">5</span></div><div class="partrow"><span class="prn">03</span><span class="prt">Die 4 Farbtypen<em>Triffst du seine Farbe, fühlt er sich verstanden. Verfehlst du sie, fühlt er sich verkauft.</em></span><span class="prp">7</span></div><div class="partrow"><span class="prn">04</span><span class="prt">Der Call<em>Das Ziel ist nicht der Abschluss. Das Ziel ist der nächste Schritt.</em></span><span class="prp">10</span></div><div class="partrow"><span class="prn">05</span><span class="prt">Einwände<em>Jedes Nein ist eine Frage in Verkleidung.</em></span><span class="prp">12</span></div><div class="partrow"><span class="prn">06</span><span class="prt">Charme & Stimme<em>Am Telefon ist deine Stimme dein ganzes Outfit.</em></span><span class="prp">14</span></div>
+    </div>
+    <footer class="run light"><span>Deutsch</span><span>3</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Mindset</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">01</div><div><h1>Mindset</h1><div class="lead">Du rufst nicht an. Du lädst ein.</div></div></div>
+      <div class="cols2">
+        <div><h2>Der Rahmen</h2><p>Die Top 0,1 % verkaufen nicht mehr, weil sie mehr reden. Sie verkaufen mehr, weil sie <b>den Rahmen setzen</b>: ruhig, neugierig, ein bisschen verspielt – und jederzeit bereit, aufzulegen.</p><div class="label">Deine Identität für jeden Call</div><blockquote>Ich bin die interessanteste Unterbrechung in seinem Tag. Ich bringe etwas mit – ich will nichts.</blockquote></div>
+        <div><h2>Die 5 Grundgesetze</h2><ol class="num"><li><span class="n">1</span><span><b>Status-Gleichheit.</b> Du bist keine Bittstellerin. Du prüfst, ob es passt.</span></li><li><span class="n">2</span><span><b>Detachment.</b> Ein Nein kostet dich nichts. Diese Ruhe zieht an.</span></li><li><span class="n">3</span><span><b>Neugier vor Pitch.</b> 70 % zuhören, 30 % reden. Wer fragt, führt.</span></li><li><span class="n">4</span><span><b>Emotion entscheidet, Logik rechtfertigt.</b> Erst das Gefühl, dann die Zahlen.</span></li><li><span class="n">5</span><span><b>Nie betteln, nie drängeln.</b> Druck erzeugt Widerstand. Sog erzeugt Ja.</span></li></ol></div>
+      </div>
+      <div class="panel"><h2>Dein unfairer Vorteil</h2><p>Viele unterschätzen dich in den ersten 10 Sekunden. <b>Perfekt.</b> Unterschätzung senkt die Abwehr – dann bist du schärfer als erwartet.</p><div class="cols3 tight"><div class="mini"><b>Wärme + Kompetenz</b> – Lächeln in der Stimme, Fakten im Kopf.</div><div class="mini"><b>Leichtigkeit</b> öffnet Türen, die Hartnäckigkeit verschließt.</div><div class="mini"><b>Charme ist Präsenz</b> – warm, aber nie verfügbar.</div></div><blockquote>Nicht süß sein, um zu gefallen. Charmant sein, weil du die Kontrolle hast.</blockquote></div></div>
+    <footer class="run"><span>Deutsch</span><span>4</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Kaufpsychologie</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">02</div><div><h1>Kaufpsychologie</h1><div class="lead">Menschen kaufen keine Produkte. Sie kaufen einen besseren Zustand von sich selbst.</div></div></div>
+      <h2>Die 3 Gehirne</h2><p>Entschieden wird in Millisekunden – vom alten Gehirn. Die Begründung liefert das neue Gehirn nach.</p><table><thead><tr><th>Gehirn</th><th>Fragt sich</th><th>Du lieferst</th></tr></thead><tbody><tr><td><b>Reptil</b></td><td>Ist das gefährlich?</td><td>Sicherheit, Ruhe, Kontrolle</td></tr><tr><td><b>Limbisch</b></td><td>Mag ich sie?</td><td>Wärme, Humor, „sie versteht mich“</td></tr><tr><td><b>Neokortex</b></td><td>Ergibt das Sinn?</td><td>Zahlen, Beispiele, nächster Schritt</td></tr></tbody></table><div class="note">Reihenfolge ist alles: <b>Sicherheit → Sympathie → Logik.</b></div>
+      <div class="panel dark"><h2>Die geheime Formel</h2><div class="formula">Schmerz × Dringlichkeit × Vertrauen<br><span>= Kaufbereitschaft</span></div><p>Fehlt ein Faktor, ist das Ergebnis null. Deine Fragen finden den Schmerz, dein Timing schafft Dringlichkeit, deine Art baut Vertrauen.</p><blockquote>Die Cheat-Codes wirken stärker, je ehrlicher du sie einsetzt. Manipulation fliegt beim zweiten Call auf – echter Einfluss bringt Empfehlungen.</blockquote></div></div>
+    <footer class="run"><span>Deutsch</span><span>5</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Kaufpsychologie</span></header>
+    <div class="content"><h2>Die 12 Hebel der Entscheidung</h2><div class="h2sub">Jeder Hebel wirkt allein. Kombiniert werden sie unwiderstehlich.</div><div class="levgrid"><div class="lev"><div class="ln">01</div><div><div class="lt">Verlustangst</div><div class="ld">Verlust schmerzt doppelt so stark wie Gewinn freut.</div><div class="lx">„Gerade fließen jeden Monat ein paar Hundert Euro einfach raus.“</div></div></div><div class="lev"><div class="ln">02</div><div><div class="lt">Neugier-Lücke</div><div class="ld">Das Gehirn hasst offene Schleifen.</div><div class="lx">„Mir ist bei Firmen wie Ihrer etwas aufgefallen – 20 Sekunden?“</div></div></div><div class="lev"><div class="ln">03</div><div><div class="lt">Mikro-Ja</div><div class="ld">Drei kleine Ja machen das große Ja leicht.</div></div></div><div class="lev"><div class="ln">04</div><div><div class="lt">Reziprozität</div><div class="ld">Gib zuerst: eine Erkenntnis, eine Zahl, einen Tipp.</div></div></div><div class="lev"><div class="ln">05</div><div><div class="lt">Social Proof</div><div class="ld">Menschen folgen Menschen, die ihnen ähnlich sind.</div><div class="lx">„Drei Betriebe hier in der Region hatten genau dieselbe Frage.“</div></div></div><div class="lev"><div class="ln">06</div><div><div class="lt">Spezifität</div><div class="ld">„17 %“ schlägt „viel“. Details wirken kompetent.</div></div></div><div class="lev"><div class="ln">07</div><div><div class="lt">Kontrolle zurückgeben</div><div class="ld">Wer die Freiheit bekommt, bleibt.</div><div class="lx">„Sie können jederzeit Nein sagen – völlig okay.“</div></div></div><div class="lev"><div class="ln">08</div><div><div class="lt">Labeling</div><div class="ld">Benannte Gefühle verlieren ihre Kraft.</div><div class="lx">„Klingt, als hätten Sie schon schlechte Erfahrungen gemacht.“</div></div></div><div class="lev"><div class="ln">09</div><div><div class="lt">Mirroring</div><div class="ld">Wiederhole seine letzten Worte als Frage.</div><div class="lx">„… zu teuer?“</div></div></div><div class="lev"><div class="ln">10</div><div><div class="lt">Knappheit</div><div class="ld">Nur wenn sie echt ist – sonst ist das Vertrauen weg.</div></div></div><div class="lev"><div class="ln">11</div><div><div class="lt">Zukunftsbild</div><div class="ld">Lass ihn das Ergebnis sehen.</div><div class="lx">„Stellen Sie sich vor, in sechs Monaten …“</div></div></div><div class="lev"><div class="ln">12</div><div><div class="lt">Pattern Interrupt</div><div class="ld">Sag, was niemand sagt – und er hört zu.</div></div></div></div></div>
+    <footer class="run"><span>Deutsch</span><span>6</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Die 4 Farbtypen</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">03</div><div><h1>Die 4 Farbtypen</h1><div class="lead">Triffst du seine Farbe, fühlt er sich verstanden. Verfehlst du sie, fühlt er sich verkauft.</div></div></div>
+      <h2>Zwei Fragen verraten alles</h2><p>Ist er <b>schnell oder bedächtig</b>? Geht es ihm um <b>Sache oder Menschen</b>?</p>
+      <div class="tmap">
+        <div class="ay">schnell</div><div class="tc" style="--c:#D9534F"><div class="tch"><span class="pdot"></span>Rot</div><div class="tcs">Der Macher</div><div class="tcw">Ergebnis, Kontrolle, Tempo</div></div><div class="tc" style="--c:#E8B13A"><div class="tch"><span class="pdot"></span>Gelb</div><div class="tcs">Der Strahlende</div><div class="tcw">Spaß, Anerkennung, Neues</div></div>
+        <div class="ay">ruhig</div><div class="tc" style="--c:#3B7DD8"><div class="tch"><span class="pdot"></span>Blau</div><div class="tcs">Der Analytiker</div><div class="tcw">Präzision, Fakten, Qualität</div></div><div class="tc" style="--c:#7B5EA7"><div class="tch"><span class="pdot"></span>Lila</div><div class="tcs">Der Bewahrer</div><div class="tcw">Harmonie, Sicherheit, Vertrauen</div></div>
+        <div></div><div class="ax">Sache</div><div class="ax">Menschen</div>
+      </div>
+      <div class="note">Die meisten sind eine Mischung – achte auf die dominante Farbe.</div>
+      <h2>Spickzettel</h2><table><thead><tr><th>Farbe</th><th>Kauft, wenn …</th><th>Dein Ton</th></tr></thead><tbody><tr><td><i class="dot red"></i>Rot</td><td>er gewinnt und entscheidet</td><td>direkt, kurz</td></tr><tr><td><i class="dot yellow"></i>Gelb</td><td>es aufregend ist</td><td>warm, verspielt</td></tr><tr><td><i class="dot purple"></i>Lila</td><td>es sich sicher anfühlt</td><td>sanft, geduldig</td></tr><tr><td><i class="dot blue"></i>Blau</td><td>es bewiesen ist</td><td>sachlich, präzise</td></tr></tbody></table></div>
+    <footer class="run"><span>Deutsch</span><span>7</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Die 4 Farbtypen</span></header>
+    <div class="content"><h2>Typ-Profile</h2><div class="prof" style="--c:#D9534F">
+    <div class="profhead"><span class="pdot"></span><div class="pname">Rot</div><div class="psub">Der Macher</div></div>
+    <div class="profkv"><table class="kv"><tr><th>Will</th><td>Ergebnis, Kontrolle, Tempo</td></tr><tr><th>Angst</th><td>Zeitverschwendung, Kontrollverlust</td></tr></table></div>
+    <div class="profcols">
+      <div><div class="colh">Erkennen</div><div class="label">Am Telefon</div><p>Nimmt mit Nachnamen ab, kurz und laut. „Ja? Worum geht’s?“ Unterbricht dich.</p><div class="label">Auf den ersten Blick</div><p>Fester Blick, klare Kleidung, Statussymbole, Titel wie CEO oder Inhaber.</p></div>
+      <div><div class="colh">Ansprechen</div><p>In 10 Sekunden auf den Punkt. Ergebnis zuerst. Gib ihm die Wahl.</p><div class="say">Ich mach’s kurz, weil Sie’s eilig haben: Es geht um X Euro im Jahr. Interessant oder nicht?</div><table class="kv"><tr><th>Flirt</th><td>Selbstbewusst-frech: „Sie sind schnell – ich mag das.“</td></tr><tr><th>Never</th><td>Smalltalk, Zögern, Entschuldigen</td></tr></table></div>
+    </div>
+  </div><div class="prof" style="--c:#E8B13A">
+    <div class="profhead"><span class="pdot"></span><div class="pname">Gelb</div><div class="psub">Der Strahlende</div></div>
+    <div class="profkv"><table class="kv"><tr><th>Will</th><td>Spaß, Anerkennung, Neues</td></tr><tr><th>Angst</th><td>Langeweile, Ablehnung</td></tr></table></div>
+    <div class="profcols">
+      <div><div class="colh">Erkennen</div><div class="label">Am Telefon</div><p>Warm, laut, lacht schnell, erzählt Geschichten, schweift ab.</p><div class="label">Auf den ersten Blick</div><p>Bunte Kleidung, offene Gesten, viele Fotos und Emojis online.</p></div>
+      <div><div class="colh">Ansprechen</div><p>Energie spiegeln, Geschichten erzählen, Vision malen. Er kauft dich vor dem Produkt.</p><div class="say">Sie sind genau der Typ, der sowas als Erster in der Branche macht.</div><table class="kv"><tr><th>Flirt</th><td>Verspielt und herzlich – lachen, seine Ideen loben</td></tr><tr><th>Never</th><td>Trocken, zahlenlastig. Und: Termin festnageln!</td></tr></table></div>
+    </div>
+  </div></div>
+    <footer class="run"><span>Deutsch</span><span>8</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Die 4 Farbtypen</span></header>
+    <div class="content"><h2>Typ-Profile</h2><div class="prof" style="--c:#7B5EA7">
+    <div class="profhead"><span class="pdot"></span><div class="pname">Lila</div><div class="psub">Der Bewahrer</div></div>
+    <div class="profkv"><table class="kv"><tr><th>Will</th><td>Harmonie, Sicherheit, Vertrauen</td></tr><tr><th>Angst</th><td>Konflikt, Veränderung, Fehler</td></tr></table></div>
+    <div class="profcols">
+      <div><div class="colh">Erkennen</div><div class="label">Am Telefon</div><p>Ruhig, höflich, langsam. „Eigentlich …“, „mal schauen“, „muss ich mit dem Team besprechen“.</p><div class="label">Auf den ersten Blick</div><p>Sanftes Lächeln, gedeckte Farben, Team- oder Familienfotos, lange im selben Job.</p></div>
+      <div><div class="colh">Ansprechen</div><p>Tempo raus, Wärme rein. Sicherheit betonen. Zeit geben – aber mit festem Termin.</p><div class="say">Kein Stress, wir gehen das ganz in Ruhe durch. Sie sollen ein gutes Gefühl haben.</div><table class="kv"><tr><th>Flirt</th><td>Fürsorglich und sanft – echtes Interesse</td></tr><tr><th>Never</th><td>Druck. Sonst verschwindet er höflich – für immer.</td></tr></table></div>
+    </div>
+  </div><div class="prof" style="--c:#3B7DD8">
+    <div class="profhead"><span class="pdot"></span><div class="pname">Blau</div><div class="psub">Der Analytiker</div></div>
+    <div class="profkv"><table class="kv"><tr><th>Will</th><td>Präzision, Fakten, Qualität</td></tr><tr><th>Angst</th><td>Fehler, Unklarheit, übers Ohr gehauen werden</td></tr></table></div>
+    <div class="profcols">
+      <div><div class="colh">Erkennen</div><div class="label">Am Telefon</div><p>Sachlich, leise, Pausen. „Wie genau berechnen Sie das?“</p><div class="label">Auf den ersten Blick</div><p>Ordentlich, neutral, wenig Mimik. Controller, Ingenieur, IT, Einkauf.</p></div>
+      <div><div class="colh">Ansprechen</div><p>Struktur und Beweise. Schritt für Schritt. Unterlagen zum Prüfen – und Zeit.</p><div class="say">Ich schicke Ihnen die Rechnung, dann können Sie jede Zahl selbst prüfen.</div><table class="kv"><tr><th>Flirt</th><td>Minimal – dein Charme ist Präzision</td></tr><tr><th>Never</th><td>Übertreiben, „Vertrauen Sie mir einfach“</td></tr></table></div>
+    </div>
+  </div></div>
+    <footer class="run"><span>Deutsch</span><span>9</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Der Call</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">04</div><div><h1>Der Call</h1><div class="lead">Das Ziel ist nicht der Abschluss. Das Ziel ist der nächste Schritt.</div></div></div><div class="steps"><div class="step"><div class="stepn">1</div><div class="stepb"><div class="stept">Der Opener<span>0–10 Sekunden · Pattern Interrupt</span></div><div class="say">Hi Herr Müller, hier ist [Name]. Ganz ehrlich: Das ist ein Kaltanruf. Wollen Sie direkt auflegen – oder geben Sie mir 30 Sekunden?</div><p>Ehrlichkeit bricht das Muster, er bekommt Kontrolle. Fast jeder sagt: „Na gut.“</p><div class="label">Charmante Variante</div><div class="say">Sie kennen mich nicht – noch nicht. Hab ich Sie mitten in etwas Wichtigem erwischt?</div></div></div><div class="step"><div class="stepn">2</div><div class="stepb"><div class="stept">Der Grund<span>10–30 Sekunden · Neugier-Lücke</span></div><div class="say">Ich spreche gerade mit [Branche] hier in der Region, weil uns bei fast allen dasselbe aufgefallen ist: [Problem]. Ich weiß nicht, ob das bei Ihnen auch so ist – deshalb rufe ich an.</div><div class="note">Kein Produkt nennen. Nur das Problem.</div></div></div><div class="step"><div class="stepn">3</div><div class="stepb"><div class="stept">Die Fragen<span>bis 3 Minuten · Er redet, du führst</span></div><ol class="num qs"><li><span class="n">1</span><span>Wie lösen Sie das aktuell?</span></li><li><span class="n">2</span><span>Was stört Sie daran am meisten?</span></li><li><span class="n">3</span><span>Wenn Sie einen Zauberstab hätten – was wäre anders?</span></li><li><span class="n">4</span><span>Was kostet es Sie, wenn sich 12 Monate nichts ändert?</span></li><li><span class="n">5</span><span>Wer redet bei der Entscheidung noch mit?</span></li></ol></div></div></div></div>
+    <footer class="run"><span>Deutsch</span><span>10</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Der Call</span></header>
+    <div class="content"><div class="steps"><div class="step"><div class="stepn">4</div><div class="stepb"><div class="stept">Der Mini-Pitch<span>30 Sekunden · Seine Worte, deine Lösung</span></div><div class="say">Sie haben gesagt, [sein Schmerz]. Genau da setzen wir an: [Lösung] – bei [Kunde] waren das [Zahl].</div><div class="note">Nutze exakt seine Formulierungen. Er widerspricht sich nicht selbst.</div></div></div><div class="step"><div class="stepn">5</div><div class="stepb"><div class="stept">Der Test-Close<span>Temperatur messen</span></div><div class="say">Auf einer Skala von 1 bis 10 – wie interessant klingt das?</div><p>Bei einer 6:</p><div class="say">Was müsste passieren, damit es eine 9 wird?</div><div class="note">Er verkauft es sich selbst.</div></div></div><div class="step"><div class="stepn">6</div><div class="stepb"><div class="stept">Der Close<span>Die Wahl statt Ja/Nein</span></div><div class="say">Lassen Sie uns 20 Minuten draufschauen. Dienstag Vormittag oder Donnerstag Nachmittag?</div><p><b>Dann: schweigen.</b> Wer zuerst redet, verliert.</p><div class="say">Ich schick Ihnen die Einladung. Und wenn was dazwischenkommt – ich bin nicht beleidigt.</div></div></div></div><div class="panel"><h2>Kaufsignale</h2><table class="sig"><tr><th>Fragt nach Preis oder Ablauf</th><td>Er spielt es schon durch.</td></tr><tr><th>Wird ruhiger, langsamer</th><td>Er denkt nach. Nicht unterbrechen.</td></tr><tr><th>Sagt „wir“ statt „Sie“</th><td>Er sieht sich als Kunde.</td></tr><tr><th>Erzählt etwas Privates</th><td>Vertrauen ist da. Jetzt den Termin.</td></tr></table></div></div>
+    <footer class="run"><span>Deutsch</span><span>11</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Einwände</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">05</div><div><h1>Einwände</h1><div class="lead">Jedes Nein ist eine Frage in Verkleidung.</div></div></div><h2>Die Formel: A · F · F</h2><p>Ein Einwand heißt meist: <i>„Ich hab Angst“</i>, <i>„Ich verstehe es nicht“</i> oder <i>„Ich mag dich noch nicht genug“</i>.</p><div class="aff"><div><span class="an">1</span><div class="at">Anerkennen</div><div class="ad">„Verstehe ich total.“ Nie: „Ja, aber …“</div></div><div><span class="an">2</span><div class="at">Fragen</div><div class="ad">Finde den echten Grund.</div></div><div><span class="an">3</span><div class="at">Führen</div><div class="ad">Zurück zum kleinsten nächsten Schritt.</div></div></div>
+      <h2>Die 12 häufigsten Neins</h2><table class="obj"><thead><tr><th>Einwand</th><th>Deine Antwort</th></tr></thead><tbody><tr><th><span class="on">01</span>„Kein Interesse.“</th><td><div class="oa">Verstehe – ich hätte auch kein Interesse an etwas, das ich nicht kenne. Eine Frage, und wenn die Antwort Nein ist, bin ich weg?</div><div class="oa">Fair. Kein Interesse am Thema – oder an Anrufen wie meinem?</div></td></tr><tr><th><span class="on">02</span>„Keine Zeit.“</th><td><div class="oa">Dann bin ich genau richtig – ich bin die Kurzversion. 27 Sekunden, ich zähle mit.</div><div class="oa">Wann passt es besser – morgen um 8:15 oder nach dem Mittag?</div></td></tr><tr><th><span class="on">03</span>„Schicken Sie mir was per Mail.“</th><td><div class="oa">Mach ich gern. Was wäre das Wichtigste, das drinstehen sollte?</div><div class="oa">Ganz ehrlich – höfliches Nein, oder wollen Sie es wirklich lesen? Beides okay.</div></td></tr><tr><th><span class="on">04</span>„Wir haben schon einen Anbieter.“</th><td><div class="oa">Super. Was mögen Sie an denen am meisten – und was würden Sie verbessern?</div><div class="oa">Wann haben Sie zuletzt geprüft, ob Sie zu viel zahlen?</div></td></tr><tr><th><span class="on">05</span>„Zu teuer.“</th><td><div class="oa">Zu teuer? <span class="hint">(spiegeln – dann schweigen)</span></div><div class="oa">Im Vergleich wozu?</div><div class="oa">Angenommen, es bezahlt sich in sechs Monaten selbst – wäre es dann noch ein Thema?</div></td></tr></tbody></table></div>
+    <footer class="run"><span>Deutsch</span><span>12</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Einwände</span></header>
+    <div class="content"><table class="obj"><thead><tr><th>Einwand</th><th>Deine Antwort</th></tr></thead><tbody><tr><th><span class="on">06</span>„Das muss ich mir überlegen.“</th><td><div class="oa">Klar. Was genau – den Preis, den Zeitpunkt oder ob es überhaupt passt?</div></td></tr><tr><th><span class="on">07</span>„Das entscheide ich nicht allein.“</th><td><div class="oa">Wer sitzt noch mit am Tisch – und was ist ihm wichtig?</div><div class="oa">Legen wir den Termin so, dass er dabei sein kann?</div></td></tr><tr><th><span class="on">08</span>„Rufen Sie in drei Monaten an.“</th><td><div class="oa">Gern. Was ändert sich bei Ihnen in drei Monaten?</div><div class="oa">Woran erkenne ich dann, dass es wirklich passt? <span class="hint">(Datum eintragen)</span></div></td></tr><tr><th><span class="on">09</span>„Woher haben Sie meine Nummer?“</th><td><div class="oa">Aus [Quelle]. Wenn Sie nicht angerufen werden möchten, trage ich Sie sofort aus.</div></td></tr><tr><th><span class="on">10</span>„Wir sind zufrieden.“</th><td><div class="oa">Das freut mich. Eher „es läuft“ oder „es könnte nicht besser sein“?</div></td></tr><tr><th><span class="on">11</span>„Sind Sie so eine Vertriebs-Tante?“</th><td><div class="oa">Erwischt. Aber eine von den guten – ich leg auch auf, wenn’s nicht passt. <span class="hint">(lachend)</span></div></td></tr><tr><th><span class="on">12</span>„Nein. Tschüss.“</th><td><div class="oa">Alles klar, danke für die Ehrlichkeit. Einen schönen Tag noch!</div></td></tr></tbody></table><div class="note">Ein eleganter Abgang ist dein nächster Einstieg.</div>
+      <div class="panel warn"><h2>Wenn er unangemessen wird</h2><p>Charme ist deine Wahl – nicht seine Einladung.</p><div class="say">Haha, netter Versuch. Zurück zu Ihren Zahlen – die sind spannender.</div><div class="say">Ich glaube, wir verstehen uns gerade falsch. Ich bin wegen [Thema] hier.</div><p>Zu viel? Freundlich beenden, dokumentieren, abgeben.</p><blockquote>Kein Deal ist deine Würde wert.</blockquote></div></div>
+    <footer class="run"><span>Deutsch</span><span>13</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Charme & Stimme</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">06</div><div><h1>Charme & Stimme</h1><div class="lead">Am Telefon ist deine Stimme dein ganzes Outfit.</div></div></div><h2>Professionell flirty</h2><table class="dd"><thead><tr><th class="do">✓ Mach das</th><th class="dont">✕ Lass das</th></tr></thead><tbody><tr><td>Hörbares Lächeln</td><td class="dont">Kichern, Säuseln</td></tr><tr><td>Seinen Namen 2–3× nutzen</td><td class="dont">Kosenamen – niemals</td></tr><tr><td>Leichte Neckerei</td><td class="dont">Anspielungen auf Aussehen</td></tr><tr><td>Ideen & Erfolge loben</td><td class="dont">Ihn als Mann loben</td></tr><tr><td>Pausen, die Spannung bauen</td><td class="dont">Dauerreden aus Nervosität</td></tr><tr><td>Grenzen mit Humor</td><td class="dont">Dich klein machen</td></tr></tbody></table>
+      <div class="panel dark"><h2>Die Formel</h2><div class="trio"><div><div class="tw">Warm</div><div class="td">wie eine Freundin</div></div><div><div class="tw">Scharf</div><div class="td">wie eine Beraterin</div></div><div><div class="tw">Unbeeindruckt</div><div class="td">wie eine Chefin</div></div></div></div>
+      <h2>Stimm-Hacks</h2><ul class="bul"><li><b>Steh auf.</b> Die Stimme wird tiefer und sicherer.</li><li><b>Tief am Satzende.</b> Hoch klingt nach Frage.</li><li><b>Langsamer als du denkst.</b> Ruhe ist Status.</li><li><b>Pause nach der Frage.</b> Bis 3 zählen.</li><li><b>Erst spiegeln, dann führen.</b> 30 Sekunden sein Tempo.</li></ul></div>
+    <footer class="run"><span>Deutsch</span><span>14</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Leitfaden</b> · Top 0,1 %</span><span>Charme & Stimme</span></header>
+    <div class="content"><div class="cols2">
+        <div><h2>10 Minuten vor dem ersten Call</h2><ul class="check"><li><i></i>Power-Pose: 2 Minuten aufrecht</li><li><i></i>Ein Song, der dich unbesiegbar macht</li><li><i></i>Opener 3× laut: flüsternd, lachend, wie ein Boss</li><li><i></i>Deine „Warum“-Notiz lesen</li><li><i></i>Ziel: 15 echte Gespräche – nicht Abschlüsse</li></ul></div>
+        <div class="panel"><h2>Die Mathematik der Gelassenheit</h2><div class="formula">1 Nein = <span>1/20 eines Termins</span></div><p>Wenn du im Schnitt 20 Wählversuche für einen Termin brauchst, bringt dich jedes Nein näher ans Ja.</p><blockquote>Feier die Neins.</blockquote></div>
+      </div>
+      <div class="cheat"><h2>Pocket-Spickzettel</h2><table class="kv"><tr><th>Opener</th><td>Ehrlich + Kontrolle zurückgeben</td></tr><tr><th>Grund</th><td>Problem, nicht Produkt</td></tr><tr><th>Fragen</th><td>Schmerz → Kosten → Entscheider</td></tr><tr><th>Pitch</th><td>Seine Worte + eine Zahl</td></tr><tr><th>Close</th><td>Zwei Termine, dann schweigen</td></tr><tr><th>Einwand</th><td>Anerkennen → Fragen → Führen</td></tr><tr><th>Farbe</th><td>Rot kurz · Gelb Spaß · Lila Sicherheit · Blau Beweise</td></tr></table><blockquote>Ich brauche diesen Deal nicht. Genau deshalb bekomme ich ihn.</blockquote></div></div>
+    <footer class="run"><span>Deutsch</span><span>15</span></footer>
+  </section>
+<section class="page part">
+    <div class="partinner">
+      <div class="partk">Part 2</div>
+      <div class="partt">English</div>
+      <div class="partov">In this part</div>
+      <div class="partrow"><span class="prn">01</span><span class="prt">Mindset<em>You don’t call. You invite.</em></span><span class="prp">17</span></div><div class="partrow"><span class="prn">02</span><span class="prt">Buying Psychology<em>People don’t buy products. They buy a better version of their situation.</em></span><span class="prp">18</span></div><div class="partrow"><span class="prn">03</span><span class="prt">The 4 Colour Types<em>Hit his colour and he feels understood. Miss it and he feels sold to.</em></span><span class="prp">20</span></div><div class="partrow"><span class="prn">04</span><span class="prt">The Call<em>The goal isn’t the close. The goal is the next step.</em></span><span class="prp">23</span></div><div class="partrow"><span class="prn">05</span><span class="prt">Objections<em>Every no is a question in disguise.</em></span><span class="prp">25</span></div><div class="partrow"><span class="prn">06</span><span class="prt">Charm & Voice<em>On the phone, your voice is your whole outfit.</em></span><span class="prp">27</span></div>
+    </div>
+    <footer class="run light"><span>English</span><span>16</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>Mindset</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">01</div><div><h1>Mindset</h1><div class="lead">You don’t call. You invite.</div></div></div>
+      <div class="cols2">
+        <div><h2>The frame</h2><p>The top 0.1 % don’t sell more because they talk more. They sell more because they <b>set the frame</b>: calm, curious, a little playful – and always ready to hang up.</p><div class="label">Your identity for every call</div><blockquote>I am the most interesting interruption of his day. I bring something – I’m not here to take.</blockquote></div>
+        <div><h2>The 5 ground rules</h2><ol class="num"><li><span class="n">1</span><span><b>Equal status.</b> You’re not asking a favour. You’re checking the fit.</span></li><li><span class="n">2</span><span><b>Detachment.</b> A no costs you nothing. That calm pulls people in.</span></li><li><span class="n">3</span><span><b>Curiosity before pitch.</b> Listen 70 %, talk 30 %. Whoever asks, leads.</span></li><li><span class="n">4</span><span><b>Emotion decides, logic justifies.</b> Feeling first, numbers second.</span></li><li><span class="n">5</span><span><b>Never beg, never push.</b> Pressure creates resistance. Pull creates yes.</span></li></ol></div>
+      </div>
+      <div class="panel"><h2>Your unfair advantage</h2><p>Many people underestimate you in the first 10 seconds. <b>Perfect.</b> It lowers their guard – then you’re sharper than they expected.</p><div class="cols3 tight"><div class="mini"><b>Warmth + competence</b> – a smile in your voice, facts in your head.</div><div class="mini"><b>Lightness</b> opens doors that persistence slams shut.</div><div class="mini"><b>Charm is presence</b> – warm, never available.</div></div><blockquote>Don’t be sweet to be liked. Be charming because you’re in control.</blockquote></div></div>
+    <footer class="run"><span>English</span><span>17</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>Buying Psychology</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">02</div><div><h1>Buying Psychology</h1><div class="lead">People don’t buy products. They buy a better version of their situation.</div></div></div>
+      <h2>The 3 brains</h2><p>Decisions happen in milliseconds – in the old brain. The new brain supplies the reason later.</p><table><thead><tr><th>Brain</th><th>It asks</th><th>You deliver</th></tr></thead><tbody><tr><td><b>Reptile</b></td><td>Is this dangerous?</td><td>Safety, calm, control</td></tr><tr><td><b>Limbic</b></td><td>Do I like her?</td><td>Warmth, humour, “she gets me”</td></tr><tr><td><b>Neocortex</b></td><td>Does it make sense?</td><td>Numbers, examples, next step</td></tr></tbody></table><div class="note">Order is everything: <b>safety → liking → logic.</b></div>
+      <div class="panel dark"><h2>The secret formula</h2><div class="formula">Pain × Urgency × Trust<br><span>= Willingness to buy</span></div><p>If one factor is zero, the result is zero. Your questions find the pain, your timing creates urgency, your manner builds trust.</p><blockquote>The cheat codes work harder the more honestly you use them. Manipulation gets exposed on the second call – real influence gets referrals.</blockquote></div></div>
+    <footer class="run"><span>English</span><span>18</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>Buying Psychology</span></header>
+    <div class="content"><h2>The 12 levers of decision</h2><div class="h2sub">Each lever works on its own. Combined, they are irresistible.</div><div class="levgrid"><div class="lev"><div class="ln">01</div><div><div class="lt">Loss aversion</div><div class="ld">A loss hurts twice as much as a gain pleases.</div><div class="lx">“Right now a few hundred euros leak out every month.”</div></div></div><div class="lev"><div class="ln">02</div><div><div class="lt">Curiosity gap</div><div class="ld">The brain hates open loops.</div><div class="lx">“I noticed something at companies like yours – 20 seconds?”</div></div></div><div class="lev"><div class="ln">03</div><div><div class="lt">Micro-yes</div><div class="ld">Three small yeses make the big yes easy.</div></div></div><div class="lev"><div class="ln">04</div><div><div class="lt">Reciprocity</div><div class="ld">Give first: an insight, a number, a tip.</div></div></div><div class="lev"><div class="ln">05</div><div><div class="lt">Social proof</div><div class="ld">People follow people like them.</div><div class="lx">“Three businesses in this area asked the exact same question.”</div></div></div><div class="lev"><div class="ln">06</div><div><div class="lt">Specifics</div><div class="ld">“17 %” beats “a lot”. Details sound competent.</div></div></div><div class="lev"><div class="ln">07</div><div><div class="lt">Give back control</div><div class="ld">Whoever is given freedom stays.</div><div class="lx">“You can say no at any point – totally fine.”</div></div></div><div class="lev"><div class="ln">08</div><div><div class="lt">Labelling</div><div class="ld">Named emotions lose their power.</div><div class="lx">“Sounds like you’ve had bad experiences before.”</div></div></div><div class="lev"><div class="ln">09</div><div><div class="lt">Mirroring</div><div class="ld">Repeat his last words as a question.</div><div class="lx">“… too expensive?”</div></div></div><div class="lev"><div class="ln">10</div><div><div class="lt">Scarcity</div><div class="ld">Only if it’s real – otherwise trust is gone.</div></div></div><div class="lev"><div class="ln">11</div><div><div class="lt">Future pacing</div><div class="ld">Let him see the result.</div><div class="lx">“Imagine six months from now …”</div></div></div><div class="lev"><div class="ln">12</div><div><div class="lt">Pattern interrupt</div><div class="ld">Say what nobody says – and he listens.</div></div></div></div></div>
+    <footer class="run"><span>English</span><span>19</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>The 4 Colour Types</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">03</div><div><h1>The 4 Colour Types</h1><div class="lead">Hit his colour and he feels understood. Miss it and he feels sold to.</div></div></div>
+      <h2>Two questions reveal everything</h2><p>Is he <b>fast or deliberate</b>? Is he about <b>tasks or people</b>?</p>
+      <div class="tmap">
+        <div class="ay">fast</div><div class="tc" style="--c:#D9534F"><div class="tch"><span class="pdot"></span>Red</div><div class="tcs">The Driver</div><div class="tcw">Results, control, speed</div></div><div class="tc" style="--c:#E8B13A"><div class="tch"><span class="pdot"></span>Yellow</div><div class="tcs">The Spark</div><div class="tcw">Fun, recognition, novelty</div></div>
+        <div class="ay">calm</div><div class="tc" style="--c:#3B7DD8"><div class="tch"><span class="pdot"></span>Blue</div><div class="tcs">The Analyst</div><div class="tcw">Precision, facts, quality</div></div><div class="tc" style="--c:#7B5EA7"><div class="tch"><span class="pdot"></span>Purple</div><div class="tcs">The Keeper</div><div class="tcw">Harmony, safety, trust</div></div>
+        <div></div><div class="ax">Tasks</div><div class="ax">People</div>
+      </div>
+      <div class="note">Most people are a mix – look for the dominant colour.</div>
+      <h2>Cheat sheet</h2><table><thead><tr><th>Colour</th><th>Buys when …</th><th>Your tone</th></tr></thead><tbody><tr><td><i class="dot red"></i>Red</td><td>he wins and decides</td><td>direct, short</td></tr><tr><td><i class="dot yellow"></i>Yellow</td><td>it feels exciting</td><td>warm, playful</td></tr><tr><td><i class="dot purple"></i>Purple</td><td>it feels safe</td><td>gentle, patient</td></tr><tr><td><i class="dot blue"></i>Blue</td><td>it’s proven</td><td>factual, precise</td></tr></tbody></table></div>
+    <footer class="run"><span>English</span><span>20</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>The 4 Colour Types</span></header>
+    <div class="content"><h2>Type profiles</h2><div class="prof" style="--c:#D9534F">
+    <div class="profhead"><span class="pdot"></span><div class="pname">Red</div><div class="psub">The Driver</div></div>
+    <div class="profkv"><table class="kv"><tr><th>Wants</th><td>Results, control, speed</td></tr><tr><th>Fears</th><td>Wasted time, losing control</td></tr></table></div>
+    <div class="profcols">
+      <div><div class="colh">Spot him</div><div class="label">On the phone</div><p>Answers with his surname, short and loud. “Yes? What’s this about?” Interrupts you.</p><div class="label">At first glance</div><p>Firm eye contact, sharp clothes, status symbols, titles like CEO or Owner.</p></div>
+      <div><div class="colh">Approach him</div><p>Get to the point in 10 seconds. Result first. Give him the choice.</p><div class="say">I’ll keep it short because you’re busy: this is about X euros a year. Interesting or not?</div><table class="kv"><tr><th>Flirt</th><td>Confident and cheeky: “You’re quick – I like that.”</td></tr><tr><th>Never</th><td>Small talk, hesitating, apologising</td></tr></table></div>
+    </div>
+  </div><div class="prof" style="--c:#E8B13A">
+    <div class="profhead"><span class="pdot"></span><div class="pname">Yellow</div><div class="psub">The Spark</div></div>
+    <div class="profkv"><table class="kv"><tr><th>Wants</th><td>Fun, recognition, novelty</td></tr><tr><th>Fears</th><td>Boredom, rejection</td></tr></table></div>
+    <div class="profcols">
+      <div><div class="colh">Spot him</div><div class="label">On the phone</div><p>Warm, loud, laughs quickly, tells stories, drifts off.</p><div class="label">At first glance</div><p>Colourful clothes, open gestures, lots of photos and emojis online.</p></div>
+      <div><div class="colh">Approach him</div><p>Mirror his energy, tell stories, paint the vision. He buys you before the product.</p><div class="say">You’re exactly the type who does this first in the industry.</div><table class="kv"><tr><th>Flirt</th><td>Playful and warm – laugh, praise his ideas</td></tr><tr><th>Never</th><td>Dry, number-heavy. And: lock in the date!</td></tr></table></div>
+    </div>
+  </div></div>
+    <footer class="run"><span>English</span><span>21</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>The 4 Colour Types</span></header>
+    <div class="content"><h2>Type profiles</h2><div class="prof" style="--c:#7B5EA7">
+    <div class="profhead"><span class="pdot"></span><div class="pname">Purple</div><div class="psub">The Keeper</div></div>
+    <div class="profkv"><table class="kv"><tr><th>Wants</th><td>Harmony, safety, trust</td></tr><tr><th>Fears</th><td>Conflict, change, mistakes</td></tr></table></div>
+    <div class="profcols">
+      <div><div class="colh">Spot him</div><div class="label">On the phone</div><p>Calm, polite, slow. “Actually …”, “we’ll see”, “I need to ask my team”.</p><div class="label">At first glance</div><p>Soft smile, muted colours, team or family photos, long in the same job.</p></div>
+      <div><div class="colh">Approach him</div><p>Slow down, warm up. Stress safety. Give him time – with a fixed date.</p><div class="say">No stress, we’ll go through it calmly. I want you to feel good about it.</div><table class="kv"><tr><th>Flirt</th><td>Caring and gentle – genuine interest</td></tr><tr><th>Never</th><td>Pressure. He’ll politely vanish – forever.</td></tr></table></div>
+    </div>
+  </div><div class="prof" style="--c:#3B7DD8">
+    <div class="profhead"><span class="pdot"></span><div class="pname">Blue</div><div class="psub">The Analyst</div></div>
+    <div class="profkv"><table class="kv"><tr><th>Wants</th><td>Precision, facts, quality</td></tr><tr><th>Fears</th><td>Mistakes, vagueness, being ripped off</td></tr></table></div>
+    <div class="profcols">
+      <div><div class="colh">Spot him</div><div class="label">On the phone</div><p>Factual, quiet, pauses. “How exactly do you calculate that?”</p><div class="label">At first glance</div><p>Tidy, neutral, little expression. Controller, engineer, IT, procurement.</p></div>
+      <div><div class="colh">Approach him</div><p>Structure and proof. Step by step. Documents to check – and time.</p><div class="say">I’ll send you the calculation so you can check every number yourself.</div><table class="kv"><tr><th>Flirt</th><td>Minimal – your charm is precision</td></tr><tr><th>Never</th><td>Exaggerating, “just trust me”</td></tr></table></div>
+    </div>
+  </div></div>
+    <footer class="run"><span>English</span><span>22</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>The Call</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">04</div><div><h1>The Call</h1><div class="lead">The goal isn’t the close. The goal is the next step.</div></div></div><div class="steps"><div class="step"><div class="stepn">1</div><div class="stepb"><div class="stept">The opener<span>0–10 seconds · pattern interrupt</span></div><div class="say">Hi Mr Miller, this is [Name]. Honestly: this is a cold call. Want to hang up right away – or give me 30 seconds?</div><p>Honesty breaks the pattern, he gets control. Almost everyone says: “Fine.”</p><div class="label">Charming version</div><div class="say">You don’t know me – yet. Did I catch you in the middle of something important?</div></div></div><div class="step"><div class="stepn">2</div><div class="stepb"><div class="stept">The reason<span>10–30 seconds · curiosity gap</span></div><div class="say">I’m talking to [industry] businesses in the area, because we noticed the same thing at almost all of them: [problem]. I don’t know if that’s true for you – that’s why I’m calling.</div><div class="note">Don’t name the product. Only the problem.</div></div></div><div class="step"><div class="stepn">3</div><div class="stepb"><div class="stept">The questions<span>up to 3 minutes · he talks, you lead</span></div><ol class="num qs"><li><span class="n">1</span><span>How do you handle that right now?</span></li><li><span class="n">2</span><span>What bothers you most about it?</span></li><li><span class="n">3</span><span>If you had a magic wand – what would be different?</span></li><li><span class="n">4</span><span>What does it cost you if nothing changes for 12 months?</span></li><li><span class="n">5</span><span>Who else has a say in this?</span></li></ol></div></div></div></div>
+    <footer class="run"><span>English</span><span>23</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>The Call</span></header>
+    <div class="content"><div class="steps"><div class="step"><div class="stepn">4</div><div class="stepb"><div class="stept">The mini pitch<span>30 seconds · his words, your solution</span></div><div class="say">You said [his pain]. That’s exactly where we come in: [solution] – for [client] that meant [number].</div><div class="note">Use his exact phrases. He won’t argue with himself.</div></div></div><div class="step"><div class="stepn">5</div><div class="stepb"><div class="stept">The test close<span>take the temperature</span></div><div class="say">On a scale of 1 to 10 – how interesting does this sound?</div><p>At a 6:</p><div class="say">What would need to happen to make it a 9?</div><div class="note">He sells it to himself.</div></div></div><div class="step"><div class="stepn">6</div><div class="stepb"><div class="stept">The close<span>a choice, not yes/no</span></div><div class="say">Let’s take 20 minutes to look at it. Tuesday morning or Thursday afternoon?</div><p><b>Then: silence.</b> Whoever speaks first loses.</p><div class="say">I’ll send the invite. And if something comes up – I won’t be offended.</div></div></div></div><div class="panel"><h2>Buying signals</h2><table class="sig"><tr><th>Asks about price or process</th><td>He’s already running it.</td></tr><tr><th>Gets quieter, slower</th><td>He’s thinking. Don’t interrupt.</td></tr><tr><th>Says “we” instead of “you”</th><td>He sees himself as a client.</td></tr><tr><th>Shares something personal</th><td>Trust is there. Book the meeting.</td></tr></table></div></div>
+    <footer class="run"><span>English</span><span>24</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>Objections</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">05</div><div><h1>Objections</h1><div class="lead">Every no is a question in disguise.</div></div></div><h2>The formula: A · A · L</h2><p>An objection usually means: <i>“I’m scared”</i>, <i>“I don’t get it”</i> or <i>“I don’t like you enough yet”</i>.</p><div class="aff"><div><span class="an">1</span><div class="at">Acknowledge</div><div class="ad">“Totally get that.” Never: “Yes, but …”</div></div><div><span class="an">2</span><div class="at">Ask</div><div class="ad">Find the real reason.</div></div><div><span class="an">3</span><div class="at">Lead</div><div class="ad">Back to the smallest next step.</div></div></div>
+      <h2>The 12 most common nos</h2><table class="obj"><thead><tr><th>Objection</th><th>Your answer</th></tr></thead><tbody><tr><th><span class="on">01</span>„Not interested.“</th><td><div class="oa">I get it – I wouldn’t be interested in something I don’t know either. One question, and if the answer is no, I’m gone?</div><div class="oa">Fair. No interest in the topic – or in calls like mine?</div></td></tr><tr><th><span class="on">02</span>„No time.“</th><td><div class="oa">Then I’m perfect – I’m the short version. 27 seconds, I’m counting.</div><div class="oa">When suits you better – tomorrow at 8:15 or after lunch?</div></td></tr><tr><th><span class="on">03</span>„Just send me an email.“</th><td><div class="oa">Happy to. What’s the one thing that should be in it?</div><div class="oa">Honestly – polite no, or do you really want to read it? Both are fine.</div></td></tr><tr><th><span class="on">04</span>„We already have a provider.“</th><td><div class="oa">Great. What do you like most about them – and what would you improve?</div><div class="oa">When did you last check whether you’re overpaying?</div></td></tr><tr><th><span class="on">05</span>„Too expensive.“</th><td><div class="oa">Too expensive? <span class="hint">(mirror – then silence)</span></div><div class="oa">Compared to what?</div><div class="oa">Suppose it paid for itself in six months – would it still be an issue?</div></td></tr></tbody></table></div>
+    <footer class="run"><span>English</span><span>25</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>Objections</span></header>
+    <div class="content"><table class="obj"><thead><tr><th>Objection</th><th>Your answer</th></tr></thead><tbody><tr><th><span class="on">06</span>„I need to think about it.“</th><td><div class="oa">Of course. About what exactly – the price, the timing, or the fit?</div></td></tr><tr><th><span class="on">07</span>„I don’t decide this alone.“</th><td><div class="oa">Who else is at the table – and what matters to them?</div><div class="oa">Shall we set the meeting so they can join?</div></td></tr><tr><th><span class="on">08</span>„Call me in three months.“</th><td><div class="oa">Sure. What changes for you in three months?</div><div class="oa">How will I know it’s really the right time then? <span class="hint">(set a date)</span></div></td></tr><tr><th><span class="on">09</span>„Where did you get my number?“</th><td><div class="oa">From [source]. If you’d rather not be called, I’ll take you off the list right now.</div></td></tr><tr><th><span class="on">10</span>„We’re happy as we are.“</th><td><div class="oa">Glad to hear it. More “it works” or “it couldn’t be better”?</div></td></tr><tr><th><span class="on">11</span>„Are you one of those sales girls?“</th><td><div class="oa">Busted. But one of the good ones – I hang up too if it’s not a fit. <span class="hint">(laughing)</span></div></td></tr><tr><th><span class="on">12</span>„No. Bye.“</th><td><div class="oa">All right, thanks for being honest. Have a lovely day!</div></td></tr></tbody></table><div class="note">An elegant exit is your next entry.</div>
+      <div class="panel warn"><h2>When he crosses the line</h2><p>Charm is your choice – not his invitation.</p><div class="say">Haha, nice try. Back to your numbers – they’re more exciting.</div><div class="say">I think we’re misunderstanding each other. I’m calling about [topic].</div><p>Too much? End politely, document it, hand it over.</p><blockquote>No deal is worth your dignity.</blockquote></div></div>
+    <footer class="run"><span>English</span><span>26</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>Charm & Voice</span></header>
+    <div class="content"><div class="sechead"><div class="secnum">06</div><div><h1>Charm & Voice</h1><div class="lead">On the phone, your voice is your whole outfit.</div></div></div><h2>Professionally flirty</h2><table class="dd"><thead><tr><th class="do">✓ Do this</th><th class="dont">✕ Skip this</th></tr></thead><tbody><tr><td>An audible smile</td><td class="dont">Giggling, cooing</td></tr><tr><td>Use his name 2–3×</td><td class="dont">Pet names – never</td></tr><tr><td>Light teasing</td><td class="dont">Hints about looks</td></tr><tr><td>Praise ideas & success</td><td class="dont">Praise him as a man</td></tr><tr><td>Pauses that build tension</td><td class="dont">Nervous non-stop talking</td></tr><tr><td>Boundaries with humour</td><td class="dont">Making yourself small</td></tr></tbody></table>
+      <div class="panel dark"><h2>The formula</h2><div class="trio"><div><div class="tw">Warm</div><div class="td">like a friend</div></div><div><div class="tw">Sharp</div><div class="td">like a consultant</div></div><div><div class="tw">Unimpressed</div><div class="td">like a boss</div></div></div></div>
+      <h2>Voice hacks</h2><ul class="bul"><li><b>Stand up.</b> Your voice gets deeper and surer.</li><li><b>Go down at the end.</b> Rising sounds like a question.</li><li><b>Slower than you think.</b> Calm is status.</li><li><b>Pause after the question.</b> Count to 3.</li><li><b>Mirror, then lead.</b> 30 seconds at his pace.</li></ul></div>
+    <footer class="run"><span>English</span><span>27</span></footer>
+  </section>
+<section class="page ">
+    <header class="run"><span><b>Cold Call Playbook</b> · Top 0,1 %</span><span>Charm & Voice</span></header>
+    <div class="content"><div class="cols2">
+        <div><h2>10 minutes before the first call</h2><ul class="check"><li><i></i>Power pose: 2 minutes standing tall</li><li><i></i>One song that makes you unbeatable</li><li><i></i>Opener out loud 3×: whispering, laughing, like a boss</li><li><i></i>Read your “why” note</li><li><i></i>Goal: 15 real conversations – not closes</li></ul></div>
+        <div class="panel"><h2>The maths of calm</h2><div class="formula">1 no = <span>1/20 of a meeting</span></div><p>If you need about 20 dials per meeting, every no brings you closer to the yes.</p><blockquote>Celebrate the nos.</blockquote></div>
+      </div>
+      <div class="cheat"><h2>Pocket cheat sheet</h2><table class="kv"><tr><th>Opener</th><td>Honest + give back control</td></tr><tr><th>Reason</th><td>Problem, not product</td></tr><tr><th>Questions</th><td>Pain → cost → decision-maker</td></tr><tr><th>Pitch</th><td>His words + one number</td></tr><tr><th>Close</th><td>Two slots, then silence</td></tr><tr><th>Objection</th><td>Acknowledge → ask → lead</td></tr><tr><th>Colour</th><td>Red short · Yellow fun · Purple safety · Blue proof</td></tr></table><blockquote>I don’t need this deal. That’s exactly why I get it.</blockquote></div></div>
+    <footer class="run"><span>English</span><span>28</span></footer>
+  </section></body></html>
